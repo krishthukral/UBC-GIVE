@@ -1,0 +1,75 @@
+<h2>Insert Values into Location</h2>
+<form method="POST" action="ubc-give.php"> <!--refresh page when submitted-->
+    <input type="hidden" id="insertLocationRequest" name="insertLocationRequest">
+    Street Name: <input type="text" name="streetname"> <br /><br />
+    Street No.: <input type="text" name="streetno"> <br /><br />
+    Postal Code: <input type="text" name="postalcode"> <br /><br />
+
+    <input type="submit" value="Insert Location" name="insertLocationSubmit"></p>
+</form>
+
+<h2>View Locations</h2>
+<form method="GET" action="ubc-give.php">
+    <input type="hidden" id="viewLocationsRequest" name="viewLocationsRequest">
+    <input type="submit" value="View Locations" name="viewLocationsSubmit"></p>
+</form>
+
+<h2>Delete a Location</h2>
+<form method="POST" action="ubc-give.php">
+    <input type="hidden" id="deleteLocationRequest" name="deleteLocationRequest">
+    Street Name: <input type="text" name="streetName"> <br /><br />
+    Street No.:  <input type="text" name="streetNo"> <br /><br />
+    <input type="submit" value="Delete Location" name="deleteLocationSubmit"></p>
+</form>
+
+
+<h2>View Posts By Category</h2>
+<form method="GET" action="ubc-give.php">
+    <input type="hidden" id="viewPostsByCategoryRequest" name="viewPostsByCategoryRequest">
+    <label>Category Name:</label>
+    <?php
+        categoryDropDown();
+    ?>
+    <input type="submit" value="View Posts" name="viewPostsByCategorySubmit"></p>
+</form>
+
+<h2>Other Category Functions</h2>
+<form method="GET" action="ubc-give.php">
+    <input type="hidden" id="viewEmptyCategoriesRequest" name="viewEmptyCategoriesRequest">
+    <input type="submit" value="View Empty Categories" name="viewEmptyCategoriesSubmit" ></p>
+</form>
+<form method="GET" action="ubc-give.php">
+    <input type="hidden" id="viewCategoryCountRequest" name="viewCategoryCountRequest">
+    <input type="submit" value="View Counts per Category" name="viewCategoryCountSubmit" ></p>
+</form>
+<form method="GET" action="ubc-give.php">
+    <input type="hidden" id="viewPopularCategoriesRequest" name="viewPopularCategoriesRequest">
+    <input type="submit" value="View Most Popular Categories" name="viewPopularCategoriesSubmit" ></p>
+</form>
+
+<h2>View Listing Information</h2>
+<form method="GET" action="ubc-give.php">
+    <label>Item:</label>
+    <?php
+        itemDropDown();
+    ?></p>
+
+    <input type="checkbox" id="Poster Name" name="attributes[]" value="A.NAME">
+    <label for="Poster Name">Poster Name</label>
+    
+    <input type="checkbox" id="Poster Email" name="attributes[]" value="A.EMAIL">
+    <label for="Poster Email">Poster Email</label>
+
+    <input type="checkbox" id="Created On" name="attributes[]" value="P.CREATED_ON">
+    <label for="Created On">Date Created</label>
+
+    <input type="checkbox" id="Expiration" name="attributes[]" value="P.EXPIRATION">
+    <label for="Expiration">Expiration Date</label>
+
+    <input type="checkbox" id="Status" name="attributes[]" value="P.POST_STATUS">
+    <label for="Status">Status</label>
+
+    <input type="hidden" id="listingInfoRequest" name="listingInfoRequest">
+    <input type="submit" value="View Listing Info" name="viewListingInfoSubmit"></p>
+</form>
+</div>
