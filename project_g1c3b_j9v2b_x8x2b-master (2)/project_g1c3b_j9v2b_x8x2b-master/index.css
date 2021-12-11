@@ -1,0 +1,35 @@
+body {
+  font-family: Leelawadee, Tahoma, sans-serif;
+}
+
+table {
+    width: "100%";
+}
+
+h2 {
+    color: navy;
+}
+
+.column {
+    float: left;
+    width: 25%; 
+  }
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.half-button {
+  width: 50%;
+  margin: 0 auto;
+}
+
+table tr {
+  text-align: center;
+}
+
+table td {
+  text-align: center;
+}
